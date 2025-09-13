@@ -35,33 +35,25 @@ const Index = () => {
     icon: Code,
     level: 100
   }, {
-    name: "React",
-    icon: Code,
-    level: 75
+    name: "Microsoft Office",
+    icon: FileText,
+    level: 100
   }, {
     name: "HTML/CSS",
     icon: Palette,
     level: 90
   }, {
-    name: "Git",
-    icon: Code,
-    level: 70
-  }, {
     name: "Web Design",
     icon: Palette,
     level: 90
   }, {
-    name: "Microsoft Office",
-    icon: FileText,
-    level: 100
+    name: "JavaScript",
+    icon: Code,
+    level: 90
   }, {
     name: "MySQL",
     icon: Code,
     level: 80
-  }, {
-    name: "JavaScript",
-    icon: Code,
-    level: 90
   }, {
     name: "Power BI",
     icon: Globe,
@@ -78,6 +70,14 @@ const Index = () => {
     name: "TypeScript",
     icon: Code,
     level: 80
+  }, {
+    name: "React",
+    icon: Code,
+    level: 75
+  }, {
+    name: "Git",
+    icon: Code,
+    level: 70
   }];
   const education = [{
     title: "Our Lady of Mount Carmel",
