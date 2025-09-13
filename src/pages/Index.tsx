@@ -127,7 +127,7 @@ const Index = () => {
           <Button variant="outline" size="icon" className="social-button w-14 h-14" onClick={() => window.open('https://github.com/qadrisyedd', '_blank')}>
             <Github className="w-6 h-6 golden-icon" />
           </Button>
-          <Button variant="outline" size="icon" className="social-button w-14 h-14" onClick={() => window.open('https://drive.google.com', '_blank')}>
+          <Button variant="outline" size="icon" className="social-button w-14 h-14" onClick={() => window.open('https://drive.google.com/file/d/1jWNYyh5000SAlwZWq1pIhyw2WCCXSsVP/view?usp=sharing', '_blank')}>
             <FileText className="w-6 h-6 golden-icon" />
           </Button>
         </div>
