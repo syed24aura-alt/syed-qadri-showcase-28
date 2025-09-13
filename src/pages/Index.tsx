@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Github, Linkedin, FileText, Code, Palette, Globe, User, Briefcase, GraduationCap } from "lucide-react";
+import { Github, Linkedin, FileText, Code, Palette, Globe, User, Briefcase, GraduationCap, Mail, Check } from "lucide-react";
 const Index = () => {
   const [showSocialButtons, setShowSocialButtons] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+  const [emailCopied, setEmailCopied] = useState(false);
 
   useEffect(() => {
     let scrollTimer: NodeJS.Timeout;
@@ -53,6 +54,16 @@ const Index = () => {
       clearTimeout(scrollTimer);
     };
   }, []);
+
+  const copyEmailToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText('qadrisyedd@gmail.com');
+      setEmailCopied(true);
+      setTimeout(() => setEmailCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy email:', err);
+    }
+  };
   const skills = [{
     name: "Python",
     icon: Code,
@@ -274,9 +285,29 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-12 px-4 border-t border-border/20">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-muted-foreground mb-4">
-            Let's Connect!
-          </p>
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <p className="text-muted-foreground">
+              Let's Connect!
+            </p>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={copyEmailToClipboard}
+              className="h-8 px-3 bg-card/30 backdrop-blur-sm border-border/50 hover:bg-card/50 hover:border-primary/50 transition-all duration-300"
+            >
+              {emailCopied ? (
+                <>
+                  <Check className="w-4 h-4 mr-2 text-green-400" />
+                  <span className="text-green-400">Copied to Clipboard</span>
+                </>
+              ) : (
+                <>
+                  <Mail className="w-4 h-4 mr-2" />
+                  <span>Email</span>
+                </>
+              )}
+            </Button>
+          </div>
           <p className="text-sm text-muted-foreground">
             © 2025 Syed Qadri.
           </p>
