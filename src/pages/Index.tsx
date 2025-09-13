@@ -70,6 +70,14 @@ const Index = () => {
     name: "Tableau",
     icon: Globe,
     level: 80
+  }, {
+    name: "Node.js",
+    icon: Code,
+    level: 80
+  }, {
+    name: "TypeScript",
+    icon: Code,
+    level: 80
   }];
   const education = [{
     title: "Our Lady of Mount Carmel",
