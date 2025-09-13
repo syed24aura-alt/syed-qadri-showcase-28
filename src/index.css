@@ -148,7 +148,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: rainbow-cycle 6s ease-in-out infinite;
+    animation: rainbow-cycle 10s ease-in-out infinite;
     text-shadow: 0 0 30px hsl(var(--glow-primary) / 0.5);
   }
 
