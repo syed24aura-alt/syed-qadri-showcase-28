@@ -31,9 +31,9 @@ const Index = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   const skills = [{
-    name: "JavaScript",
+    name: "Python",
     icon: Code,
-    level: 80
+    level: 100
   }, {
     name: "React",
     icon: Code,
@@ -49,7 +49,7 @@ const Index = () => {
   }, {
     name: "Web Design",
     icon: Palette,
-    level: 85
+    level: 90
   }, {
     name: "Microsoft Office",
     icon: FileText,
@@ -57,19 +57,19 @@ const Index = () => {
   }, {
     name: "MySQL",
     icon: Code,
-    level: 70
+    level: 80
   }, {
-    name: "Python",
+    name: "JavaScript",
     icon: Code,
     level: 90
   }, {
     name: "Power BI",
     icon: Globe,
-    level: 70
+    level: 80
   }, {
     name: "Tableau",
     icon: Globe,
-    level: 70
+    level: 80
   }];
   const education = [{
     title: "Our Lady of Mount Carmel",
