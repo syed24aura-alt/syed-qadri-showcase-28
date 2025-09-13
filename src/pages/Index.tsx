@@ -8,25 +8,21 @@ const Index = () => {
 
   useEffect(() => {
     let scrollTimer: NodeJS.Timeout;
-    const isMobile = window.innerWidth <= 768;
 
     const handleScroll = () => {
       const scrolled = window.scrollY > 100;
       
-      if (isMobile) {
-        // On mobile: show only while actively scrolling
-        setShowSocialButtons(scrolled);
-        
-        // Clear existing timer
-        clearTimeout(scrollTimer);
-        
-        // Hide buttons after scrolling stops
+      // Show buttons while scrolling
+      setShowSocialButtons(scrolled);
+      
+      // Clear existing timer
+      clearTimeout(scrollTimer);
+      
+      // Hide buttons after scrolling stops
+      if (scrolled) {
         scrollTimer = setTimeout(() => {
           setShowSocialButtons(false);
         }, 1000);
-      } else {
-        // On desktop: keep existing behavior
-        setShowSocialButtons(scrolled);
       }
 
       // Check which sections are visible
