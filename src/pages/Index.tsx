@@ -252,7 +252,7 @@ const Index = () => {
             Let's Connect!
           </p>
           <p className="text-sm text-muted-foreground">
-            © 2024 Syed Qadri.
+            © 2025 Syed Qadri.
           </p>
         </div>
       </footer>
