@@ -51,9 +51,9 @@ const Index = () => {
     icon: Code,
     level: 90
   }, {
-    name: "MySQL",
+    name: "Node.js",
     icon: Code,
-    level: 80
+    level: 90
   }, {
     name: "Power BI",
     icon: Globe,
@@ -63,7 +63,7 @@ const Index = () => {
     icon: Globe,
     level: 80
   }, {
-    name: "Node.js",
+    name: "MySQL",
     icon: Code,
     level: 80
   }, {
