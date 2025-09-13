@@ -5,10 +5,29 @@ import { Github, Linkedin, FileText, Code, Palette, Globe, User, Briefcase, Grad
 const Index = () => {
   const [showSocialButtons, setShowSocialButtons] = useState(false);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
+
   useEffect(() => {
+    let scrollTimer: NodeJS.Timeout;
+    const isMobile = window.innerWidth <= 768;
+
     const handleScroll = () => {
       const scrolled = window.scrollY > 100;
-      setShowSocialButtons(scrolled);
+      
+      if (isMobile) {
+        // On mobile: show only while actively scrolling
+        setShowSocialButtons(scrolled);
+        
+        // Clear existing timer
+        clearTimeout(scrollTimer);
+        
+        // Hide buttons after scrolling stops
+        scrollTimer = setTimeout(() => {
+          setShowSocialButtons(false);
+        }, 1000);
+      } else {
+        // On desktop: keep existing behavior
+        setShowSocialButtons(scrolled);
+      }
 
       // Check which sections are visible
       const sections = document.querySelectorAll('.fade-in-section');
@@ -25,10 +44,14 @@ const Index = () => {
       });
       setVisibleSections(newVisibleSections);
     };
+
     window.addEventListener('scroll', handleScroll);
     handleScroll(); // Check initial state
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimer);
+    };
   }, []);
   const skills = [{
     name: "Python",
