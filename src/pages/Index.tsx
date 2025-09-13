@@ -75,7 +75,7 @@ const Index = () => {
     title: "Our Lady of Mount Carmel",
     degree: "Highschool Diploma, OSSD",
     period: "2021 - 2025",
-    description: "Graduated with honours",
+    description: "Graduated with Honours",
     icon: GraduationCap
   }];
 
