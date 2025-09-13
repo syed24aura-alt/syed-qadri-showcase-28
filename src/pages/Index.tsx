@@ -121,7 +121,7 @@ const Index = () => {
 
         {/* Floating Social Buttons */}
         <div className={`fixed right-8 top-1/2 -translate-y-1/2 flex flex-col gap-4 z-50 transition-all duration-500 ${showSocialButtons ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-20'}`}>
-          <Button variant="outline" size="icon" className="social-button w-14 h-14" onClick={() => window.open('https://www.linkedin.com/in/qadriisyedd/', '_blank')}>
+          <Button variant="outline" size="icon" className="social-button w-14 h-14" onClick={() => window.open('https://www.linkedin.com/in/qadri-syed/', '_blank')}>
             <Linkedin className="w-6 h-6 golden-icon" />
           </Button>
           <Button variant="outline" size="icon" className="social-button w-14 h-14" onClick={() => window.open('https://github.com/qadrisyedd', '_blank')}>
