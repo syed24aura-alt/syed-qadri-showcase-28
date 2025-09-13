@@ -78,7 +78,6 @@ const Index = () => {
     description: "Graduated with Honours",
     icon: GraduationCap
   }];
-
   const experiences = [{
     title: "Personal Projects and Online Courses",
     organization: "Self-Directed Learning",
@@ -111,9 +110,7 @@ const Index = () => {
           <h1 className="text-6xl md:text-8xl font-bold rainbow-text mb-8 lg:text-7xl">
             Syed Qadri
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground animate-fade-in">
-            Aspiring Developer & Creative Thinker
-          </p>
+          
           <div className="mt-8 animate-fade-in">
             <p className="font-bold text-gray-300 text-base">Computer Science Undergraduate | Aspiring Programmer & Data Analyst  </p>
           </div>
@@ -192,10 +189,9 @@ const Index = () => {
           </div>
           
           <div className="space-y-6">
-            {education.map((edu, index) => (
-              <Card key={index} className="bg-card/30 backdrop-blur-sm border-border/50 transition-all duration-300 hover:bg-card/50" style={{
-                animationDelay: `${index * 200}ms`
-              }}>
+            {education.map((edu, index) => <Card key={index} className="bg-card/30 backdrop-blur-sm border-border/50 transition-all duration-300 hover:bg-card/50" style={{
+            animationDelay: `${index * 200}ms`
+          }}>
                 <CardContent className="p-6">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-primary/10 border border-primary/20">
@@ -209,8 +205,7 @@ const Index = () => {
                     </div>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
